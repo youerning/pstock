@@ -1,0 +1,37 @@
+<ion-view view-title="回测">
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">
+        </ion-nav-back-button>
+        <!-- 添加按钮 -->
+        <ion-nav-buttons side="right">
+            <button class="button  button-positive" ng-click="search()">
+                <i class="icon ion-plus-round"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+    <div class="list">
+        <div class="item">
+            <div class="row header">
+              <div class="col-40">策略名</div>
+              <div class="col-20">初始资金</div>
+              <div class="col-20">股票</div>
+              <div class="col-20">收益</div>
+            </div>
+        </div>
+        <a href="#/detail-bt/{{d.id}}" class="item" ng-repeat="d in data">
+            <div class="row">
+              <div class="col-40">
+              <p class="namep">{{d.strategy}}</p>
+              <h6 class="codeh6">{{d.cash}}<h6>
+              </div>
+              <div class="col-20" >{{d.cash}}</div>
+              <div class="col-20 {{d.change|color}}" >
+                  <p class="namep">{{d.name}}</p>
+                  <h6 class="codeh6">{{d.code}}<h6></div>
+              <div class="col-20 {{d.change|color}}" >{{d.portfolio}}</div>
+            </div>
+        </a>
+    </div>
+    </ion-content>
+</ion-view>

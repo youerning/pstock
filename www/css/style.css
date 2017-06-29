@@ -1,0 +1,40 @@
+.indexp {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.namep {
+    margin-bottom: 0px;
+}
+
+.codeh6 {
+    margin-bottom: 0px;
+    margin-top: 3px;
+}
+
+.col h3 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.col h5 {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.user-title {
+    text-align: center;
+    width: 100%;
+}
+
+
+.user-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h2.news-title {
+    white-space: normal; 
+    height: 3.6em
+}

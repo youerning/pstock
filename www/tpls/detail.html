@@ -1,0 +1,29 @@
+<ion-view view-title="{{name}}的详情">
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+        <ion-list >
+            <ion-item>
+                <canvas id="line" class="chart chart-line" chart-data="dataline"
+                    chart-labels="labelsline" chart-series="seriesline" chart-options="optionsline"
+                    chart-dataset-override="datasetOverride" chart-click="onClick">
+                </canvas>
+            </ion-item>
+            <ion-item>
+                <canvas id="bar" class="chart chart-bar" chart-data="databar"
+                    chart-labels="labelsbar" chart-series="seriesbar" chart-options="optionsbar"
+                    chart-dataset-override="datasetOverride" chart-click="onClick">
+                </canvas>
+            </ion-item>
+            <ion-item>
+                基本面资料
+            </ion-item>
+            <ion-item>公司名称:{{detail.name}}</ion-item>
+            <ion-item>所属地域:{{detail.region}}</ion-item>
+            <ion-item>公司简介:{{detail.intro}}</ion-item>
+            <ion-item>经营范围:{{detail.bussines}}</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

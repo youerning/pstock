@@ -1,0 +1,44 @@
+<ion-view view-title="策略{{strategy}}">
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
+        </ion-nav-back-button>
+        <!-- 添加按钮 -->
+        <ion-nav-buttons side="right">
+            <button class="button  button-positive" ng-click="search()">
+                <i class="icon ion-plus-round"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <ion-list >
+            <ion-item></ion-item>
+            <ion-item>
+                <canvas id="line" class="chart chart-line" chart-data="data"
+                    chart-labels="labels" chart-series="series" chart-options="options"
+                    chart-dataset-override="datasetOverride" chart-click="onClick">
+                </canvas>
+            </ion-item>
+            <ion-item>现金流</ion-item>
+            <ion-item>
+                <canvas id="line" class="chart chart-line" chart-data="data"
+                    chart-labels="labels" chart-series="series" chart-options="options"
+                    chart-dataset-override="datasetOverride" chart-click="onClick">
+                </canvas>
+            </ion-item>
+            <ion-item>策略收益,股票收益,基准收益</ion-item>
+            <ion-item>
+                <canvas id="line" class="chart chart-line" chart-data="data"
+                    chart-labels="labels" chart-series="series" chart-options="options"
+                    chart-dataset-override="datasetOverride" chart-click="onClick">
+                </canvas>
+            </ion-item>
+            <ion-item>累计收益</ion-item>
+            <ion-item>最终收益:</ion-item>
+            <ion-item>年化收益:</ion-item>
+            <ion-item>平均日收益:</ion-item>
+            <ion-item>每日收益标准差:</ion-item>
+            <ion-item>夏普比率:</ion-item>
+            <ion-item>最大回撤</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

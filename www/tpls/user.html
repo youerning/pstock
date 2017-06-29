@@ -1,0 +1,41 @@
+<ion-view view-title="自选">
+    <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+        <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
+        </ion-nav-back-button>
+        <!-- 消息图标 -->
+        <ion-nav-buttons side="left">
+            <button class="button button-positive" ng-click="msg()">
+                <i class="icon ion-android-mail"></i>
+            </button>
+        </ion-nav-buttons>
+        <!-- 添加按钮 -->
+        <ion-nav-buttons side="right">
+            <button class="button  button-positive" ng-click="userAdd()">
+                <i class="icon ion-plus-round"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+    <!-- 自选股票行情 -->
+    <div class="list">
+        <div class="item">
+            <div class="row header">
+              <div class="col-50">名称</div>
+              <div class="col-25">当前价</div>
+              <div class="col-25">涨跌幅</div>
+            </div>
+        </div>
+        <!-- 股票信息 -->
+        <a href="#/detail-code/{{d.code['0']}}" class="item user-item" ng-repeat="(code, d) in data">
+            <div class="row">
+              <div class="col-50">
+              <p class="namep">{{d.name["0"]}}</p>
+              <h6 class="codeh6">{{d.code["0"]}}<h6>
+              </div>
+              <div class="col-25" >{{d.price["0"]}}</div>
+              <div class="col-25 {{d.price['0'] - d.open['0']|color}}" >{{d.price['0'] - d.open['0'] |number:2}}</div>
+            </div>
+        </a>
+    </div>
+    </ion-content>
+</ion-view>
